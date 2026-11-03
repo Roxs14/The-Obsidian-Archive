@@ -1,0 +1,282 @@
+
+/* THE OBSIDIAN ARCHIVE
+   Main visual stylesheet
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #171112;
+    color: #E6D9C5;
+    font-family: Georgia, serif;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 7%;
+    border-bottom: 1px solid #44312B;
+}
+
+.logo {
+    color: #C5A77B;
+    text-decoration: none;
+    font-size: 17px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: #C7B9A7;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D5AA72;
+}
+
+.archive-status {
+    color: #A88A69;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    padding: 130px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #38242A 0%,
+            #24181B 45%,
+            #171112 100%
+        );
+}
+
+.eyebrow {
+    color: #B99B70;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 82px);
+    font-weight: normal;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 em {
+    color: #B99B70;
+}
+
+.intro {
+    max-width: 550px;
+    color: #B8AA9A;
+    line-height: 1.9;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+/* BUTTON */
+
+button {
+    padding: 16px 30px;
+    background: #72503D;
+    color: #F1E5D2;
+    border: 1px solid #A78A68;
+    font-family: inherit;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #A17A58;
+    transform: translateY(-3px);
+}
+
+.classified {
+    margin-top: 22px;
+    color: #88786C;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* TRANSMISSION */
+
+.transmission {
+    text-align: center;
+    padding: 65px 20px;
+    background: #302027;
+    border-top: 1px solid #72503D;
+    border-bottom: 1px solid #72503D;
+}
+
+.transmission h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.transmission p:not(.eyebrow) {
+    color: #C7B9A7;
+    line-height: 1.8;
+}
+
+/* COLLECTIONS */
+
+.collections {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    font-weight: normal;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.archive-card {
+    padding: 35px 27px;
+    min-height: 260px;
+    background: #21191A;
+    border: 1px solid #49352D;
+    transition: 0.3s;
+}
+
+.archive-card:hover {
+    border-color: #B99B70;
+    transform: translateY(-5px);
+}
+
+.card-number {
+    color: #B99B70;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.archive-card h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 30px 0 15px;
+}
+
+.archive-card p {
+    color: #B8AA9A;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.archive-card a {
+    color: #C5A77B;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* MYSTERY */
+
+.mystery {
+    padding: 100px 10%;
+    text-align: center;
+    background: #24191C;
+}
+
+.mystery h2 {
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.mystery p {
+    color: #C7B9A7;
+    line-height: 1.8;
+}
+
+.mystery .mystery-clue {
+    margin-top: 35px;
+    color: #C5A77B;
+    font-style: italic;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 35px 15px;
+    text-align: center;
+    border-top: 1px solid #49352D;
+}
+
+footer p {
+    color: #A88A69;
+    font-size: 10px;
+    letter-spacing: 2px;
+    line-height: 2.5;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 750px) {
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .archive-status {
+        display: none;
+    }
+
+    .hero {
+        padding: 100px 7%;
+    }
+
+    .archive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collections {
+        padding: 75px 7%;
+    }
+}
